@@ -15,12 +15,11 @@
       <div *ngFor="let category of categories" class="col-lg-4 col-md-4 mb-4">
         <div class="card">
           <div class="card-header">
-            <h5 class="card-title">{{ category.name }}</h5>
+            <h5 class="card-title">{{ category.gif.title}}</h5>
           </div>
           <div class="card-body">
-            <img *ngIf="category.gif?.images?.downsized?.url" src="{{ category.gif.images.downsized.url }}" alt="{{ category.name }}" class="img-fluid rounded">
-            <h5 class="card-title"></h5>
-            <p class="card-text">Name Encoded: {{ category.name_encoded }}</p>
+            <img *ngIf="category.gif?.images.original.mp4" src="{{ category.gif.images.downsized.url }}" alt="{{ category.name }}" class="card-img-top">
+            <p class="card-text">Name subcategories: {{ category.subcategories.name }}</p>
           </div>
         </div>
       </div>

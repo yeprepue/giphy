@@ -16,6 +16,7 @@ export class GiphyService {
 
   getCategory() {
     const url = `${this.apiUrl}/categories?api_key=${this.apiKey}`;
+    console.log(url);
     return this.http.get(url).pipe(
       map((response: any) => response.data),
       catchError(this.handleError)
@@ -26,8 +27,11 @@ export class GiphyService {
     const url = `${this.apiUrl}/search?api_key=${this.apiKey}&q=${query}`;
     return this.http.get(url).pipe(
       map((response: any) => response.data),
-      catchError(this.handleError)
+
+      catchError(this.handleError),
+
     );
+
   }
 
   private handleError(error: any) {
