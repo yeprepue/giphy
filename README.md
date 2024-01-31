@@ -3,7 +3,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
 
-# Giphy inityialization
+# Giphy initialization
 npm i
 
 ## Development server
