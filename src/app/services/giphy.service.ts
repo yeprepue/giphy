@@ -14,7 +14,7 @@ export class GiphyService {
 
   constructor(private http: HttpClient) {}
 
-  getCategory() {
+  getCategories() {
     const url = `${this.apiUrl}/categories?api_key=${this.apiKey}`;
     console.log(url);
     return this.http.get(url).pipe(

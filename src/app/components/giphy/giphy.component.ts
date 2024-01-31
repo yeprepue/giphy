@@ -1,5 +1,3 @@
-// giphy.component.ts
-
 import { Component } from '@angular/core';
 import { GiphyService } from 'src/app/services/giphy.service';
 
@@ -12,25 +10,27 @@ export class GiphyComponent {
   categories: any = [];
   searchTerm = '';
 
-  constructor(private giphyService: GiphyService) {}
+  constructor(private giphyService: GiphyService) { }
 
   ngOnInit(): void {
     this.loadCategories();
   }
 
   loadCategories() {
-    this.giphyService.getCategory().subscribe((response: any) => {
+    this.giphyService.getCategories().subscribe((response: any) => {
       this.categories = response;
+      console.log(response);
     });
   }
 
   searchGifs() {
-    if (this.searchTerm.trim() !== '') {
-      this.giphyService.searchGifs(this.searchTerm).subscribe((response: any) => {
-        this.categories = response;
-      });
-    } else {
+    const resultados = this.categories.filter((category: any) => {
+      const tituloGif = category.gif.title.toLowerCase();
+      return tituloGif.includes(this.searchTerm.trim().toLowerCase());
+    });
+    this.categories = resultados;
 
+    if (this.searchTerm.trim() == "") {
       this.loadCategories();
     }
   }
