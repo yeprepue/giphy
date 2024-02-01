@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Category } from 'src/app/interfaces/category';
 import { GiphyService } from 'src/app/services/giphy.service';
+
 
 @Component({
   selector: 'app-giphy',
@@ -17,9 +19,8 @@ export class GiphyComponent {
   }
 
   loadCategories() {
-    this.giphyService.getCategories().subscribe((response: any) => {
+    this.giphyService.getCategories().subscribe((response: Category) => {
       this.categories = response;
-      console.log(response);
     });
   }
 
