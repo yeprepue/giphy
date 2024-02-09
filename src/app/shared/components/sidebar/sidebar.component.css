@@ -1,4 +1,53 @@
-#sidebar{
+body {
+  background: linear-gradient(to bottom, #057ba6b8, #dfa70d79);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#sidebar {
+  background-image: linear-gradient(to right, rgba(20, 163, 188, 0.548), rgba(190, 167, 11, 0.717));
+  padding: 1rem;
+  color: #ffffffd2;
+  margin-right: 80px;
   height: 100vh;
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
+  overflow-y: auto;
+}
+
+#sidebar h3 {
+  color: #ffc107;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#sidebar hr {
+  border-color: #ffffff;
+}
+
+.list-group {
+  padding-left: 0;
+}
+
+.list-group-item {
+  background-color: #9baf28c9;
+  border: 1px solid #59d61fc9;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  background-color: #6c757d;
+}
+#sidebar .list-group-item-action button {
+  background: linear-gradient(to right, #ffA500, #ff8c00); /* Degradado naranja */
+  border: 1px solid #ffA500; /* Borde del mismo color */
+  color: #000000; /* Texto negro */
+  cursor: pointer;
+  width: 100%; /* Hace que el botón ocupe todo el ancho del contenedor */
+  padding: 15px; /* Ajusta el relleno para hacer el botón más grande */
+}
+
+#sidebar .list-group-item-action button:hover {
+  background: linear-gradient(to right, #ff8c00, #ffA500); /* Cambio de degradado al pasar el ratón */
 }
