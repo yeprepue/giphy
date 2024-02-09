@@ -1,0 +1,23 @@
+body {
+  background: linear-gradient(to bottom, #057ba6b8, #dfa70d79);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo adicional para el contenedor de las tarjetas */
+.container {
+  padding-top: 20px;
+}
+.giphy {
+  font-family: 'Oxygen', sans-serif;
+  height: auto;
+  background: rgba(233, 110, 10, 0.565);
+  background: linear-gradient(
+    180deg,
+    rgba(15, 77, 177, 0.516) 0%,
+    rgba(146, 174, 225, 0.549) 15%,
+    rgba(93, 219, 71, 0.542) 30%,
+    rgba(45, 188, 20, 0.547) 45%,
+    rgba(190, 167, 11, 0.717) 100%
+  );
+}

@@ -4,8 +4,11 @@ import { GifsService } from '../../services/gifs.service';
 @Component({
   selector: 'gifs-search-box',
   template: `
+    <div class="giphy">
     <h5>Buscar</h5>
-    <input type="text" name="search" id="search" class="form-control"    placeholder="Buscar gifs...." (keyup.enter)="searchTag()" #txtTagInpunt>`
+    <input type="text" name="search" id="search" class="form-control"    placeholder="Buscar gifs...." (keyup.enter)="searchTag()" #txtTagInpunt>
+    </div>`
+
 })
 export class SearchBoxComponent {
   @ViewChild('txtTagInpunt')

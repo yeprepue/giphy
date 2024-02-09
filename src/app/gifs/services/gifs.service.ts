@@ -1,7 +1,7 @@
 
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { SearchResponse ,Gif } from '../interfaces/gifs.interfaces';
+import { SearchResponse, Gif } from '../interfaces/gifs.interfaces';
 
 
 @Injectable({
@@ -16,7 +16,8 @@ export class GifsService {
 
 
   constructor(private http: HttpClient) {
-    // this.loadLocalStorage();
+    this._tagsHistory = [];
+    this.loadLocalStorage();
     console.log('Gifs Service Ready');
   }
 
@@ -24,32 +25,48 @@ export class GifsService {
     return [...this._tagsHistory];
   }
 
-private organizeHistory(tag:string){
-  tag = tag.toLocaleLowerCase();
+  private organizeHistory(tag: string) {
+    tag = tag.toLocaleLowerCase();
 
-  if(this._tagsHistory.includes(tag)){
-    this._tagsHistory= this._tagsHistory.filter((oldTag) => oldTag !== tag)
+    if (this._tagsHistory.includes(tag)) {
+      this._tagsHistory = this._tagsHistory.filter((oldTag) => oldTag !== tag)
+    }
+
+    this._tagsHistory.unshift(tag);
+    this._tagsHistory = this._tagsHistory.splice(0, 10);
+    this.saveLocalStorage();
+  }
+  private saveLocalStorage(): void {
+    localStorage.setItem('history', JSON.stringify(this._tagsHistory));
+
   }
 
-  this._tagsHistory.unshift(tag);
-  this._tagsHistory = this._tagsHistory.splice(0,10);
-  //this.saveLocalStorage();
-}
+  private loadLocalStorage(): void {
+    const history = localStorage.getItem('history');
+    if (!history) return;
 
-  searchTag(tag: string):void {
+    this._tagsHistory = JSON.parse(history);
+
+    if (this._tagsHistory.length === 0) return;
+    this.searchTag(this._tagsHistory[0]);
+  }
+
+
+
+  searchTag(tag: string): void {
 
     if (tag.length === 0) return;
     this.organizeHistory(tag);
 
 
     const params = new HttpParams()
-      .set('api_key', this.apiKey )
-      .set('limit', '10' )
-      .set('q', tag )
+      .set('api_key', this.apiKey)
+      .set('limit', '10')
+      .set('q', tag)
 
 
-    this.http.get<SearchResponse>(`${ this.serviceUrl }/search`, { params })
-      .subscribe( resp => {
+    this.http.get<SearchResponse>(`${this.serviceUrl}/search`, { params })
+      .subscribe(resp => {
 
 
 
