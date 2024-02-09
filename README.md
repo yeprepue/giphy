@@ -12,6 +12,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
+- ng build
+- npm run build:href `add "./" to the -- # ng build html --base-href ./`
+- npm run build:github `npm run delete:docs && npm run build:href && npm run copy:dist `
+
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
