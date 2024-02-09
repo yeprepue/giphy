@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 # Bases
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
 
+=======
+<<<<<<< HEAD
+# Giphy
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+
+# Giphy initialization
+npm i
+
+>>>>>>> b215c8def2cb6bd350d855d95db1ff9273beaed1
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -25,3 +36,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<<<<<<< HEAD
+=======
+=======
+# giphy
+>>>>>>> 3d5bf44bc656b948a0d331b43a943f99000bb532
+>>>>>>> b215c8def2cb6bd350d855d95db1ff9273beaed1

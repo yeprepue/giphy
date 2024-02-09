@@ -3,7 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "bases": {
+=======
+    "giphy": {
+>>>>>>> b215c8def2cb6bd350d855d95db1ff9273beaed1
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+<<<<<<< HEAD
             "outputPath": "dist/bases",
+=======
+            "outputPath": "dist/giphy",
+>>>>>>> b215c8def2cb6bd350d855d95db1ff9273beaed1
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +68,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "browserTarget": "bases:build:production"
             },
             "development": {
               "browserTarget": "bases:build:development"
+=======
+              "browserTarget": "giphy:build:production"
+            },
+            "development": {
+              "browserTarget": "giphy:build:development"
+>>>>>>> b215c8def2cb6bd350d855d95db1ff9273beaed1
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +86,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< HEAD
             "browserTarget": "bases:build"
+=======
+            "browserTarget": "giphy:build"
+>>>>>>> b215c8def2cb6bd350d855d95db1ff9273beaed1
           }
         },
         "test": {
@@ -96,6 +115,10 @@
     }
   },
   "cli": {
+<<<<<<< HEAD
     "analytics": "a28bbcdd-ff0a-46d4-ad28-2fee0dbc7209"
+=======
+    "analytics": "4e7e4ad2-877c-4619-8d3b-d8cc6c317131"
+>>>>>>> b215c8def2cb6bd350d855d95db1ff9273beaed1
   }
 }

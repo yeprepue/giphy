@@ -1,0 +1,93 @@
+/* Establecer el fondo de la página */
+body {
+  background: linear-gradient(to bottom, #057ba6b8, #dfa70d79);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo adicional para el contenedor de las tarjetas */
+.container {
+  padding-top: 20px;
+}
+
+.card {
+  border: 1px solid #1493eede; /* Ajusta el estilo del borde según tus preferencias */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 20px 1px rgba(194, 10, 29, 0.259) !important;
+  transition: all 1.7s linear;
+}
+
+.card-header {
+  background-color: #135592b6;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.card-body {
+  padding: 0.3rem 1rem;
+    font-size: 1rem;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+  background-image: linear-gradient(to right, rgba(20, 163, 188, 0.548) , rgba(190, 167, 11, 0.717));
+  padding: 10px 0;
+}
+
+.navbar form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar input[type="text"] {
+  padding: 15px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.navbar button {
+  padding: 15px 25px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: #e7740f;
+}
+
+/* Fondo específico de la ruta /giphy */
+.giphy {
+  font-family: 'Oxygen', sans-serif;
+  height: auto;
+  background: rgba(233, 110, 10, 0.565);
+  background: linear-gradient(
+    180deg,
+    rgba(15, 77, 177, 0.516) 0%,
+    rgba(146, 174, 225, 0.549) 15%,
+    rgba(93, 219, 71, 0.542) 30%,
+    rgba(45, 188, 20, 0.547) 45%,
+    rgba(190, 167, 11, 0.717) 100%
+  );
+}
